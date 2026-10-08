@@ -25,7 +25,7 @@ Explanation: Concatenate them.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-08T08:08:01.280Z  
+**Submitted:** 2026-10-08T08:11:06.334Z  
 
 ```java
 import java.lang.*;
