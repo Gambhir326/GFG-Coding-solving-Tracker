@@ -30,7 +30,7 @@ Explanation: Concatenating s1 and s2 to get "PracticeGeeks" then reversing it to
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-16T11:12:02.417Z  
+**Submitted:** 2026-10-16T11:13:23.316Z  
 
 ```java
 class Solution {
