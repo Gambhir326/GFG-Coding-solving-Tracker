@@ -59,40 +59,69 @@ A  **swap**  is defined as exchanging the values at two distinct positions in th
 ## Solution
 
 **Language:** Java  
-**Runtime:** 102 ms (beats 100.00%)  
-**Memory:** 109 MB (beats 100.00%)  
-**Submitted:** 2026-10-17T09:44:19.481Z  
+**Runtime:** 1176 ms (beats 12.08%)  
+**Memory:** 187.5 MB (beats 24.16%)  
+**Submitted:** 2026-10-17T09:45:48.655Z  
 
 ```java
 class Solution {
+
+    private int getDigitSum(int num) {
+        int sum = 0;
+
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+
+        return sum;
+    }
+
+    private int compareByDigitSum(int num1, int num2) {
+        int num1DigitSum = getDigitSum(num1);
+        int num2DigitSum = getDigitSum(num2);
+
+        if (num1DigitSum != num2DigitSum) {
+            return Integer.compare(num1DigitSum, num2DigitSum);
+        }
+
+        return Integer.compare(num1, num2);
+    }
+
     public int minSwaps(int[] nums) {
         int n = nums.length;
-        long[] keys = new long[n];
 
+        Integer[] afterSorted = new Integer[n];
         for (int i = 0; i < n; i++) {
-            int x = nums[i], s = 0;
-            while (x > 0) { s += x % 10; x /= 10; }   
-            keys[i] = ((long) s << 47) | ((long) nums[i] << 17) | i;
+            afterSorted[i] = nums[i];
         }
 
-        Arrays.sort(keys);                           
+        Arrays.sort(afterSorted, this::compareByDigitSum);
 
-        int mask = (1 << 17) - 1;                     
-        int[] target = new int[n];
-        for (int k = 0; k < n; k++) target[k] = (int) (keys[k] & mask);
-
-        boolean[] visited = new boolean[n];
-        int swaps = 0;
+        Map<Integer, Integer> valToIdx = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            int len = 0, j = i;
-            while (!visited[j]) {
-                visited[j] = true;
-                j = target[j];
-                len++;
-            }
-            if (len > 0) swaps += len - 1;// a cycle of length L needs L-1 swaps
+            valToIdx.put(nums[i], i);
         }
-        return swaps;
+
+        int swapCount = 0;
+        for (int i = 0; i < n; i++) {
+            int expectedVal = afterSorted[i];
+            int currVal = nums[i];
+
+            if (expectedVal == currVal) continue;
+
+            int idx = valToIdx.get(expectedVal);
+
+            nums[i] = expectedVal;
+            nums[idx] = currVal;
+
+            valToIdx.put(expectedVal, i);
+            valToIdx.put(currVal, idx);
+
+            swapCount++;
+        }
+
+        return swapCount;
     }
 }
 ```
