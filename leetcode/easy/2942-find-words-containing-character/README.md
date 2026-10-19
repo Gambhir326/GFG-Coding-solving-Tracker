@@ -51,22 +51,44 @@ Explanation: "z" does not occur in any of the words. Hence, we return an empty a
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-10-19T09:00:50.084Z  
+**Runtime:** 2 ms (beats 46.25%)  
+**Memory:** 46.2 MB (beats 93.54%)  
+**Submitted:** 2026-10-19T09:05:36.754Z  
 
 ```java
 class Solution {
     public List<Integer> findWordsContaining(String[] words, char x) {
-        // int n = words.length;
+        int n = words.length;
         List<Integer> res = new ArrayList<>();
 
-        for(int i = 0; i < words.length; i++) {
-            if(words[i].indexOf(x) != -1)  {
-                res.add(i);
+        for(int i = 0; i < n ; i++) {
+            for(int j = 0; j < words[i].length(); j++) {
+                if(words[i].charAt(j) == x){
+                    res.add(i);
+                    break;
+                }  
             }
         }
         return res;
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for(int i = 0; i < words.length; i++) {
+        //     if(words[i].indexOf(x) != -1)  {
+        //         res.add(i);
+        //     }
+        // }
+        // return res;
     }
 }
 ```
