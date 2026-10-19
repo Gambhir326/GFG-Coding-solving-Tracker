@@ -8,11 +8,12 @@ class Solution {
         for(int i = 0 ; i < n ; i++) {
             if(nums[i] == target) res.add(i);
         }
-        if(!res.isEmpty()) {
-            return res;
-        }
-        else{
-            return new ArrayList<>();
-        }
+        // if(!res.isEmpty()) {
+        //     return res;
+        // }
+        // else{
+        //     return new ArrayList<>();
+        // }
+        return res;
     }
 }
