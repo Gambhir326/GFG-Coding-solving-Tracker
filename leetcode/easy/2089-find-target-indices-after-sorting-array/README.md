@@ -53,8 +53,8 @@ The index where nums[i] == 5 is 4.
 
 **Language:** Java  
 **Runtime:** 6 ms (beats 27.80%)  
-**Memory:** 46.3 MB (beats 43.75%)  
-**Submitted:** 2026-10-19T09:01:52.737Z  
+**Memory:** 49.7 MB (beats 19.56%)  
+**Submitted:** 2026-10-19T09:02:05.622Z  
 
 ```java
 class Solution {
@@ -67,13 +67,13 @@ class Solution {
         for(int i = 0 ; i < n ; i++) {
             if(nums[i] == target) res.add(i);
         }
-        // if(!res.isEmpty()) {
-        //     return res;
-        // }
-        // else{
-        //     return new ArrayList<>();
-        // }
-        return res;
+        if(!res.isEmpty()) {
+            return res;
+        }
+        else{
+            return new ArrayList<>();
+        }
+        // return res;
     }
 }
 ```
