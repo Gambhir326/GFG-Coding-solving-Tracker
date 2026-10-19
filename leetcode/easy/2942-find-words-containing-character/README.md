@@ -52,17 +52,17 @@ Explanation: "z" does not occur in any of the words. Hence, we return an empty a
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 46.25%)  
-**Memory:** 45.9 MB (beats 99.59%)  
-**Submitted:** 2026-10-19T08:59:42.742Z  
+**Memory:** 46.1 MB (beats 98.05%)  
+**Submitted:** 2026-10-19T09:00:28.354Z  
 
 ```java
 class Solution {
     public List<Integer> findWordsContaining(String[] words, char x) {
-        int n = words.length;
+        // int n = words.length;
         List<Integer> res = new ArrayList<>();
 
-        for(int i = 0; i < n; i++) {
-            if(words[i].indexOf(x) != -1 ) {
+        for(int i = 0; i < words.length; i++) {
+            if(words[i].indexOf(x) != -1)  {
                 res.add(i);
             }
         }
