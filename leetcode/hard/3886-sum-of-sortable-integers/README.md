@@ -63,8 +63,8 @@ Return an integer denoting the sum of all possible sortable integers `k`.
 
 **Language:** Java  
 **Runtime:** 145 ms (beats 22.73%)  
-**Memory:** 70.9 MB (beats 56.82%)  
-**Submitted:** 2026-10-20T12:00:53.372Z  
+**Memory:** 71.1 MB (beats 54.55%)  
+**Submitted:** 2026-10-20T12:03:24.627Z  
 
 ```java
 class Solution {
@@ -124,9 +124,6 @@ class Solution {
     }
     //KMP End
 
-
-
-
     boolean isRotation(int[] vec1, int[] vec2) {
         int[] txt = new int[vec2.length * 2];
         System.arraycopy(vec2, 0, txt, 0, vec2.length);
@@ -134,10 +131,14 @@ class Solution {
         return search(vec1, txt);
     }
 
+
+
+
+
     public int sortableIntegers(int[] nums) {
         int n = nums.length;
         int[] sorted = nums.clone();
-        java.util.Arrays.sort(sorted);
+        Arrays.sort(sorted);
 
         int result = 0;
 
@@ -146,8 +147,8 @@ class Solution {
 
             boolean valid = true;
             for (int start = 0; start < n; start += k) {
-                int[] vec1 = java.util.Arrays.copyOfRange(nums, start, start + k);
-                int[] vec2 = java.util.Arrays.copyOfRange(sorted, start, start + k);
+                int[] vec1 = Arrays.copyOfRange(nums, start, start + k);
+                int[] vec2 = Arrays.copyOfRange(sorted, start, start + k);
 
                 if (!isRotation(vec1, vec2)) {
                     valid = false;
