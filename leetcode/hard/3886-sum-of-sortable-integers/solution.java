@@ -55,9 +55,6 @@ class Solution {
     }
     //KMP End
 
-
-
-
     boolean isRotation(int[] vec1, int[] vec2) {
         int[] txt = new int[vec2.length * 2];
         System.arraycopy(vec2, 0, txt, 0, vec2.length);
@@ -65,10 +62,14 @@ class Solution {
         return search(vec1, txt);
     }
 
+
+
+
+
     public int sortableIntegers(int[] nums) {
         int n = nums.length;
         int[] sorted = nums.clone();
-        java.util.Arrays.sort(sorted);
+        Arrays.sort(sorted);
 
         int result = 0;
 
@@ -77,8 +78,8 @@ class Solution {
 
             boolean valid = true;
             for (int start = 0; start < n; start += k) {
-                int[] vec1 = java.util.Arrays.copyOfRange(nums, start, start + k);
-                int[] vec2 = java.util.Arrays.copyOfRange(sorted, start, start + k);
+                int[] vec1 = Arrays.copyOfRange(nums, start, start + k);
+                int[] vec2 = Arrays.copyOfRange(sorted, start, start + k);
 
                 if (!isRotation(vec1, vec2)) {
                     valid = false;
