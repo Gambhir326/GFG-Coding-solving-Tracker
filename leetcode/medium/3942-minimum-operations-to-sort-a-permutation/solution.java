@@ -1,27 +1,40 @@
 class Solution {
     public int minOperations(int[] nums) {
         int n = nums.length;
-        if (n <= 2) {                       // any order of 0..n-1 is a rotation here
-            return nums[0] == 0 ? 0 : 1;
+
+        int asc = 0;
+        int dsc = 0;
+        
+        for(int i = 1 ; i < n; i++) {
+            //{condition} ? {expressionIfTrue}:{expressionIfFalse}
+            asc += (nums[i] == (nums[i-1]+1)%n) ? 1 : 0;
+            dsc += (nums[i-1] == (nums[i]+1)%n) ? 1 : 0;
+        }
+        
+
+        // since it is in ascending there is no need for solving the array if and only if the starting index value is 0, because it will go through 0,1,2,3,4,........,n-1
+        if(asc == n - 1 && nums[0] == 0) {
+            return 0;
         }
 
-        boolean asc = true, dsc = true;
-        for (int i = 1; i < n && (asc || dsc); i++) {
-            int prev = nums[i - 1], cur = nums[i];
-            if (asc && cur != (prev == n - 1 ? 0 : prev + 1)) asc = false;
-            if (dsc && prev != (cur == n - 1 ? 0 : cur + 1)) dsc = false;
+
+        if(asc == n-1) {
+            int leftRot  = n - nums[0];
+            int rightRot = 1 + (nums[n-1] + 1) + 1;
+            return Math.min(leftRot, rightRot);
         }
 
-        if (asc) {
-            int s = nums[0];
-            if (s == 0) return 0;
-            return Math.min(n - s, s + 2);  // rotate left vs reverse-rotate-reverse
+        if(dsc == n-1) {
+            //Mandatory 1 Reverse
+            int leftRot = n - nums[n-1] + 1;
+
+            //x Left Rot + 1 Reverse
+            int rightRot = (nums[0]+1)%n + 1;
+
+            return Math.min(leftRot, rightRot);
         }
-        if (dsc) {
-            int fromEnd = (n - nums[n - 1]) % n + 1;  // reverse, then rotate
-            int fromFront = (nums[0] + 1) % n + 1;    // rotate, then reverse
-            return Math.min(fromEnd, fromFront);
-        }
+
         return -1;
+        
     }
 }
