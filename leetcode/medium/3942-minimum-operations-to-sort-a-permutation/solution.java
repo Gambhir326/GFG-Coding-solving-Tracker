@@ -26,7 +26,7 @@ class Solution {
 
         if(dsc == n-1) {
             //Mandatory 1 Reverse
-            int leftRot = n - nums[n-1] % n + 1;
+            int leftRot = n - nums[n-1] + 1;
 
             //x Left Rot + 1 Reverse
             int rightRot = (nums[0]+1)%n + 1;
