@@ -63,8 +63,8 @@ It is impossible to reach `[2, 0, 1, 3]`. Thus, the answer is -1.
 
 **Language:** Java  
 **Runtime:** 6 ms (beats 15.00%)  
-**Memory:** 94.3 MB (beats 95.00%)  
-**Submitted:** 2026-10-22T17:03:02.697Z  
+**Memory:** 94.8 MB (beats 85.00%)  
+**Submitted:** 2026-10-22T17:02:31.042Z  
 
 ```java
 class Solution {
@@ -95,7 +95,7 @@ class Solution {
 
         if(dsc == n-1) {
             //Mandatory 1 Reverse
-            int leftRot = n - nums[n-1] % n + 1;
+            int leftRot = n - nums[n-1] + 1;
 
             //x Left Rot + 1 Reverse
             int rightRot = (nums[0]+1)%n + 1;
