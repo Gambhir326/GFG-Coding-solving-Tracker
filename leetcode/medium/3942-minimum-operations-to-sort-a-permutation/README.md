@@ -62,9 +62,9 @@ It is impossible to reach `[2, 0, 1, 3]`. Thus, the answer is -1.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 15.00%)  
-**Memory:** 95 MB (beats 71.67%)  
-**Submitted:** 2026-10-22T16:49:22.829Z  
+**Runtime:** 0 ms  
+**Memory:** 41.8 MB  
+**Submitted:** 2026-10-22T16:49:38.259Z  
 
 ```java
 class Solution {
