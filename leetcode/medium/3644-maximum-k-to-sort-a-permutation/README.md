@@ -54,23 +54,23 @@ Only `k = 0` allows sorting since no greater `k` allows the required swaps where
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 69.77%)  
-**Memory:** 110.1 MB (beats 86.05%)  
-**Submitted:** 2026-10-23T10:44:47.347Z  
+**Memory:** 110.1 MB (beats 90.70%)  
+**Submitted:** 2026-10-23T10:47:07.964Z  
 
 ```java
 class Solution {
     public int sortPermutation(int[] nums) {
         int n = nums.length;
-        int k = -1;                     
-        boolean sorted = true;
+        int k = -1;                  // all bits set;         
+        // boolean sorted = true;
 
         for (int i = 0; i < n; i++) {
             if (nums[i] != i) {        
                 k &= nums[i];
-                sorted = false;
+                // sorted = false;
             }
         }
-        return sorted ? 0 : k;
+        return k == -1 ? 0 : k;
 
         
     }
