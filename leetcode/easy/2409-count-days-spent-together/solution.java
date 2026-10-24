@@ -10,7 +10,7 @@ class Solution {
 
         // it will return 0 if the end start subtraction is less than 0;
         // if end is greater than the start then it will return the amount of days together
-        return Math.max(0 , end - start + 1);
+        return Math.max(0 , end - start + 1); // + 1 is added because the number itself isnt counted in the date function and the date should need to be counted as well so we add +1 at the end
     }
 
 
