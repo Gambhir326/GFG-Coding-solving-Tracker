@@ -42,8 +42,8 @@ Explanation: After shuffling, each character remains in its position.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 65.27%)  
-**Memory:** 45 MB (beats 93.28%)  
-**Submitted:** 2026-10-24T21:45:19.246Z  
+**Memory:** 45.1 MB (beats 93.28%)  
+**Submitted:** 2026-10-24T21:45:30.638Z  
 
 ```java
 class Solution {
