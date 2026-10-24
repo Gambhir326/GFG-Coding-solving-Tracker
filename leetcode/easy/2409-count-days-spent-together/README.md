@@ -44,8 +44,8 @@ Explanation: There is no day when Alice and Bob are in Rome together, so we retu
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.4 MB (beats 94.97%)  
-**Submitted:** 2026-10-24T15:26:45.481Z  
+**Memory:** 42.3 MB (beats 96.09%)  
+**Submitted:** 2026-10-24T15:28:23.524Z  
 
 ```java
 class Solution {
@@ -60,7 +60,7 @@ class Solution {
 
         // it will return 0 if the end start subtraction is less than 0;
         // if end is greater than the start then it will return the amount of days together
-        return Math.max(0 , end - start + 1);
+        return Math.max(0 , end - start + 1); // + 1 is added because the number itself isnt counted in the date function and the date should need to be counted as well so we add +1 at the end
     }
 
 
