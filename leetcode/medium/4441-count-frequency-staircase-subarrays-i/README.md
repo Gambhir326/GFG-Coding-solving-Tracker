@@ -80,9 +80,9 @@ So the answer is `6 + 2 = 8`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 51 ms (beats 100.00%)  
-**Memory:** 46.9 MB (beats 100.00%)  
-**Submitted:** 2026-10-25T03:13:42.702Z  
+**Runtime:** 50 ms (beats 100.00%)  
+**Memory:** 46.1 MB (beats 100.00%)  
+**Submitted:** 2026-10-25T03:13:57.019Z  
 
 ```java
 class Solution {
@@ -128,7 +128,6 @@ class Solution {
                 int len = j - i + 1;
                 int reqLen = k * (k + 1) / 2;
 
-                // Valid frequency staircase check
                 if (len == reqLen && count == k) {
                     ans++;
                 }
