@@ -41,7 +41,6 @@ class Solution {
                 int len = j - i + 1;
                 int reqLen = k * (k + 1) / 2;
 
-                // Valid frequency staircase check
                 if (len == reqLen && count == k) {
                     ans++;
                 }
