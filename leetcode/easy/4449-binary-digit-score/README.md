@@ -65,8 +65,8 @@ A  **set bit**  refers to a bit in the binary representation of a number that ha
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 42.2 MB (beats 100.00%)  
-**Submitted:** 2026-10-25T02:34:15.642Z  
+**Memory:** 42.2 MB (beats 50.00%)  
+**Submitted:** 2026-10-25T02:34:27.513Z  
 
 ```java
 class Solution {
