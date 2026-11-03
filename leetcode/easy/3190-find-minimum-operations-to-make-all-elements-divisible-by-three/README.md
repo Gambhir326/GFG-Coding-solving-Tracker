@@ -41,8 +41,8 @@ All array elements can be made divisible by 3 using 3 operations:
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 37.50%)  
-**Memory:** 43.3 MB (beats 82.61%)  
-**Submitted:** 2026-11-03T12:47:01.774Z  
+**Memory:** 43.1 MB (beats 88.15%)  
+**Submitted:** 2026-11-03T12:47:08.294Z  
 
 ```java
 class Solution {
