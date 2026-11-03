@@ -54,8 +54,8 @@ Now, all elements of `nums` are equal to 5. The minimum total moves is `2`.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 29.52%)  
-**Memory:** 45.8 MB (beats 93.22%)  
-**Submitted:** 2026-11-03T00:41:23.423Z  
+**Memory:** 45.7 MB (beats 93.22%)  
+**Submitted:** 2026-11-03T12:26:08.095Z  
 
 ```java
 class Solution {
@@ -63,9 +63,9 @@ class Solution {
         int max = nums[0];
         for (int x : nums) max = Math.max(max, x);
 
-        int count = 0;
+        long count = 0;
         for (int x : nums) count += max - x;
-        return count;
+        return(int) count;
     }
 }
 ```
