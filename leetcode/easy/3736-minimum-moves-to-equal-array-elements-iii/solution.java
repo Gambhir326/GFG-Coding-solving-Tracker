@@ -1,20 +1,10 @@
 class Solution {
     public int minMoves(int[] nums) {
-        int n = nums.length;
-        int count = 0;
         int max = nums[0];
+        for (int x : nums) max = Math.max(max, x);
 
-        for(int i = 1; i < n ; i++) {
-            if(max < nums[i]) {
-                max = nums[i];
-            }
-        }
-        for(int i = 0; i < n; i++) {
-            while(nums[i] < max){
-                nums[i]++;
-                count++;
-            }
-        }
+        int count = 0;
+        for (int x : nums) count += max - x;
         return count;
     }
 }
