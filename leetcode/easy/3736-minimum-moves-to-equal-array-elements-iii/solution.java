@@ -3,8 +3,8 @@ class Solution {
         int max = nums[0];
         for (int x : nums) max = Math.max(max, x);
 
-        int count = 0;
+        long count = 0;
         for (int x : nums) count += max - x;
-        return count;
+        return(int) count;
     }
 }
