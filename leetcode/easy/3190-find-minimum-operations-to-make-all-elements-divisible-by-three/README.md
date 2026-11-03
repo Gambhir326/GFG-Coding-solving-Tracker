@@ -41,44 +41,17 @@ All array elements can be made divisible by 3 using 3 operations:
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 37.50%)  
-**Memory:** 43.1 MB (beats 88.15%)  
-**Submitted:** 2026-11-03T12:44:53.549Z  
+**Memory:** 43.3 MB (beats 82.61%)  
+**Submitted:** 2026-11-03T12:47:01.774Z  
 
 ```java
 class Solution {
     public int minimumOperations(int[] nums) {
-        int n = nums.length;
+        // int n = nums.length;
         long count = 0;
 
         for(int num : nums){
-            // while(num < 3) {
-            //     if(num == 2){
-            //         num++;
-            //         count++;
-            //     }
-            //     else if(num == 1){
-            //         n--;
-            //         count++;
-            //     }
-            // }
-            // while(num > 3 && num % 3 == 1) {
-            //     num--;
-            //     count++;
-            // }
-            // while(num > 3 && num % 3 == 2) {
-            //     num++;
-            //     count++;
-            // }
-            
-            if(num % 3 == 1){
-                num--;
-                count++;
-            }
-            else if(num % 3 == 2) {
-                num++;
-                count++;
-            }
-            
+            if (num % 3 != 0) count++;
         }
         return(int) count;
         
