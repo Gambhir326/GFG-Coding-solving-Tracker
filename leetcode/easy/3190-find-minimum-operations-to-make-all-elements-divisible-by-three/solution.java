@@ -4,7 +4,15 @@ class Solution {
         long count = 0;
 
         for(int num : nums){
-            if (num % 3 != 0) count++;
+            if(num % 3 == 1){
+                num--;
+                count++;
+            }
+            else if(num % 3 == 2) {
+                num++;
+                count++;
+            }
+            
         }
         return(int) count;
         
