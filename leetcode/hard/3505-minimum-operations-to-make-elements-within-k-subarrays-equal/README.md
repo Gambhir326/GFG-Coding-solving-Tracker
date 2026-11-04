@@ -48,14 +48,14 @@ Return the  **minimum**  number of operations needed to have  **at least**  `k` 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 401 ms (beats 84.21%)  
+**Runtime:** 421 ms (beats 84.21%)  
 **Memory:** 208.1 MB (beats 50.00%)  
-**Submitted:** 2026-11-04T06:14:04.249Z  
+**Submitted:** 2026-11-04T06:14:42.090Z  
 
 ```java
 import java.util.*;
 
-/**
+/*
 BIG IDEA (two parts):
 Part A: For every window of size x, find the cheapest way to make all its elements equal. The best target value is the MEDIAN of the window.
     -> computeWindowCosts()
