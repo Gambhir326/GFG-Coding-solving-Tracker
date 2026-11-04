@@ -1,6 +1,6 @@
 import java.util.*;
 
-/**
+/*
 BIG IDEA (two parts):
 Part A: For every window of size x, find the cheapest way to make all its elements equal. The best target value is the MEDIAN of the window.
     -> computeWindowCosts()
