@@ -50,8 +50,8 @@ The subarray `[3, 1, 3, 6]` along with all subarrays of `nums` with three or few
 
 **Language:** Java  
 **Runtime:** 29 ms (beats 78.57%)  
-**Memory:** 129.4 MB (beats 75.00%)  
-**Submitted:** 2026-11-13T15:11:29.124Z  
+**Memory:** 129.5 MB (beats 71.43%)  
+**Submitted:** 2026-11-13T15:12:13.522Z  
 
 ```java
 class Solution {
