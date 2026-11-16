@@ -43,24 +43,18 @@ Output: 0
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 28.70%)  
+**Runtime:** 1 ms (beats 99.05%)  
 **Memory:** 42.1 MB (beats 84.69%)  
-**Submitted:** 2026-11-16T11:51:11.847Z  
+**Submitted:** 2026-11-16T11:52:42.459Z  
 
 ```java
 class Solution {
     public int addDigits(int num) {
-        if( num <= 0) return 0;
-
-        while(num >= 10) {
-            int sum = 0;
-            while(num > 0) {
-                sum += num % 10;
-                num /= 10;
-            }
-            num = sum;
-        }
-        return num;  
+        if (num == 0)
+            return 0;
+        if (num % 9 == 0)
+            return 9;
+        return num % 9;
     }
 }
 ```
