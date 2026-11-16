@@ -57,9 +57,9 @@ s becomes "0" + "0" + "0" = "000", whose length is equal to k, so we return "000
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 98.69%)  
-**Memory:** 42.3 MB (beats 89.74%)  
-**Submitted:** 2026-11-16T11:50:05.662Z  
+**Runtime:** 0 ms  
+**Memory:** 41.7 MB  
+**Submitted:** 2026-11-16T11:50:56.275Z  
 
 ```java
 class Solution {
