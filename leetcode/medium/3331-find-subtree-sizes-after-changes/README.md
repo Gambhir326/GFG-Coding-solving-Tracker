@@ -57,9 +57,9 @@ The following changes will happen at the same time:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 147 ms (beats 72.09%)  
-**Memory:** 235.9 MB (beats 76.74%)  
-**Submitted:** 2026-11-21T12:33:30.226Z  
+**Runtime:** 181 ms (beats 53.49%)  
+**Memory:** 235.3 MB (beats 76.74%)  
+**Submitted:** 2026-11-21T12:43:17.036Z  
 
 ```java
 class Solution {
