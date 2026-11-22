@@ -53,8 +53,8 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 54.82%)  
-**Memory:** 42.4 MB (beats 56.79%)  
-**Submitted:** 2026-11-22T19:46:57.343Z  
+**Memory:** 42.3 MB (beats 68.18%)  
+**Submitted:** 2026-11-22T19:47:05.324Z  
 
 ```java
 class Solution {
