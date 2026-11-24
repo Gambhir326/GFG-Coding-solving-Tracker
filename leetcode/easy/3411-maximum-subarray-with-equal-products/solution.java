@@ -13,9 +13,9 @@ class Solution {
                 currentLcm = lcm(currentLcm, nums[j]);
                 // Max possible lcm(1..10) * gcd is 2520 * 10 = 25200.
                 // Breaking early prevents long overflow.
-                // if (prod > 25200) {
-                //     break;
-                // }
+                if (prod > 25200) {
+                    break;
+                }
 
                 if (prod == currentGcd * currentLcm) {
                     maxLen = Math.max(maxLen, j - i + 1);
