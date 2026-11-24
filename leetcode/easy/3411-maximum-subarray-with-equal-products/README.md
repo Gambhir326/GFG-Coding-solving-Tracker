@@ -54,9 +54,9 @@ The longest product equivalent subarray is `[3, 4, 5].`
 ## Solution
 
 **Language:** Java  
-**Runtime:** 5 ms (beats 16.93%)  
-**Memory:** 42.9 MB (beats 100.00%)  
-**Submitted:** 2026-11-24T20:33:45.536Z  
+**Runtime:** 3 ms (beats 82.01%)  
+**Memory:** 43 MB (beats 99.47%)  
+**Submitted:** 2026-11-24T20:33:52.809Z  
 
 ```java
 class Solution {
@@ -74,9 +74,9 @@ class Solution {
                 currentLcm = lcm(currentLcm, nums[j]);
                 // Max possible lcm(1..10) * gcd is 2520 * 10 = 25200.
                 // Breaking early prevents long overflow.
-                // if (prod > 25200) {
-                //     break;
-                // }
+                if (prod > 25200) {
+                    break;
+                }
 
                 if (prod == currentGcd * currentLcm) {
                     maxLen = Math.max(maxLen, j - i + 1);
